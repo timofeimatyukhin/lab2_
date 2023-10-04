@@ -4,6 +4,11 @@
 #include <iostream>
 #include "service.h"
 #include "Data.h"
+#include "Patient.h"
+#include "Doctor.h"
+#include "Hospital.h"
+
+
 
 
 
@@ -12,12 +17,18 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     setlocale(LC_ALL, "RUS");
+    //Hospital hospital = CreateHospital(Patient[], Doctor[], 0, 0);
     Service service = createService("12.12.2012", 1200);
     PrintService(service);
     Data data = CreateData(232301, 178, 76, 25);
     PrintData(data);
     SetAge(&data, 35);
     PrintData(data);
+    Doctor doctor = CreateDoctor(data);
+    PrintDoctor(doctor);
+    Patient patient = CreatePatient(service, data);
+    SetDoctor()
+
        
 
 
